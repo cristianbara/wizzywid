@@ -38,7 +38,7 @@ function retheme()  {
       '--dark-grey': '#232733',
       '--medium-grey': '#2f3545',
       '--light-grey': '#383f52',
-      '--highlight-pink': '#e91e63',
+      '--highlight-pink': '#e9931e',
       '--highlight-blue': '#2196f3',
       '--input-border-color': '#596c7a'
     });
