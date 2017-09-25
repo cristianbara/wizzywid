@@ -38,7 +38,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         this._attributeDefaultsForTag = {};
 
         this._aceEditor = ace.edit('__editor');
-        this._aceEditor.setReadOnly(true);
+        this._aceEditor.setReadOnly(false);
         this._aceEditor.setTheme("ace/theme/monokai");
         this._aceEditor.getSession().setMode("ace/mode/html");
         this._aceEditor.$blockScrolling = Infinity;

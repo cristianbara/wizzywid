@@ -1,0 +1,134 @@
+<!--
+@license
+Copyright (c) 2017 Cristian-Dan Bara. All rights reserved.
+This code may only be used under the WTFPL style license found at https://en.wikipedia.org/wiki/WTFPL
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+
+  <template>
+    <style>
+      :host {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        height: 100%;
+      }
+
+      .sample_app_layout__box {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #757575;
+      }
+    
+      .sample_app_layout__box .sample1_avatar {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #ddd;
+        line-height: 64px;
+        font-size: 30px;
+        color: #555;
+        text-align: center;
+      }
+    
+      .sample_app_layout__box h2 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #212121;
+      }
+    
+
+      .sample_app_layout__box {
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin: 24px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #757575;
+      }
+    
+      .sample_app_layout__box .sample1_avatar {
+        display: inline-block;
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        background: #ddd;
+        line-height: 64px;
+        font-size: 30px;
+        color: #555;
+        text-align: center;
+      }
+    
+      .sample_app_layout__box h2 {
+        font-size: 22px;
+        margin: 16px 0;
+        color: #212121;
+      }
+    
+      app-header#app_header {
+        background-color: rgb(66, 133, 244);
+        color: white;
+        transform: translate3d(0px, 0px, 0px);
+        flex-direction: row;
+        transition-duration: 0ms;
+      }
+      app-toolbar {
+        transform: translate3d(0px, 0px, 0px);
+      }
+      app-drawer#_sampleAppLayoutDrawer {
+        transition-duration: 200ms;
+        touch-action: pan-y;
+      }
+      paper-input#paper_input {
+        box-sizing: border-box;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transform: none;
+      }
+    </style>
+    <app-header condenses reveals effects="waterfall" id="app_header">
+      <app-toolbar>
+        <paper-icon-button icon="menu"></paper-icon-button>
+        <div>My I/O App</div>
+      </app-toolbar>
+    </app-header>
+    <app-drawer align="start" id="drawer"> 
+     <!-- this is not bound to any event -->
+      <app-toolbar>
+        <div>My App</div>
+      </app-toolbar>
+      <paper-listbox>
+        <paper-item>action one</paper-item>
+        <paper-item>action two</paper-item>
+        <paper-item>action three</paper-item>
+      </paper-listbox>
+    </app-drawer>
+    <div id="div" class="sample_app_layout__box">
+      <div class="sample1_avatar">I</div>
+      <paper-input value="{{inputText}}" type="text" id="paper_input">paper-input</paper-input>
+    </div>
+    <div id="div1" class="sample_app_layout__box">
+      <div class="sample1_avatar">O</div>
+      <h2>[[inputText]]</h2>
+      <p>I am a subtitle</p>
+    </div>
+    <iron-icons></iron-icons>
+  </template>
+  
